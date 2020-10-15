@@ -25,7 +25,7 @@ If your DDNS provider isn't already supported, please open a new issue here:\n$I
 "Cloudflare" "(cloudflare.com)" \
 "deSEC" "(desec.io)" \
 "Strato" "(strato.de)" \
-"Duckdns" 4>&1 1>&2 2>&3 3>&4)
+"Duckdns" "duckdns.org" 3>&1 1>&2 2>&3)
 
 case "$choice" in
     "Cloudflare")
@@ -51,7 +51,7 @@ case "$choice" in
         PROTOCOL="duckdns"
         SERVER="www.duckdns.org"
         USE_SSL="yes"
-    ;;        
+    ;;
     "Strato")
         PROVIDER="Strato"
         INSTRUCTIONS="activate DynDNS for your Domain"
