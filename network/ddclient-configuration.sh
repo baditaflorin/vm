@@ -24,7 +24,8 @@ $MENU_GUIDE\n\n$RUN_LATER_GUIDE
 If your DDNS provider isn't already supported, please open a new issue here:\n$ISSUES" "$WT_HEIGHT" "$WT_WIDTH" 4 \
 "Cloudflare" "(cloudflare.com)" \
 "deSEC" "(desec.io)" \
-"Strato" "(strato.de)" 3>&1 1>&2 2>&3)
+"Strato" "(strato.de)" \
+"Duckdns" 4>&1 1>&2 2>&3 3>&4)
 
 case "$choice" in
     "Cloudflare")
@@ -43,6 +44,14 @@ case "$choice" in
         SERVER="update.dedyn.io"
         USE_SSL="yes"
     ;;
+    "Duckdns")
+        PROVIDER="Duckdns"
+        INSTRUCTIONS="The 'duckdns' protocol is used by the free dynamic DNS service offered by www.duckdns.org."
+        GUIDE="https://www.duckdns.org/install.jsp"
+        PROTOCOL="duckdns"
+        SERVER="www.duckdns.org"
+        USE_SSL="yes"
+    ;;        
     "Strato")
         PROVIDER="Strato"
         INSTRUCTIONS="activate DynDNS for your Domain"
